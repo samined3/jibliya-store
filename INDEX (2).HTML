@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>مضوي محمول قوي</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    font-family: Tahoma, Arial;
+    background:#f2f2f2;
+    margin:0;
+}
+.container{
+    max-width:420px;
+    margin:auto;
+    background:#ffffff;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:#0a6cff;
+}
+.subtitle{
+    text-align:center;
+    font-size:15px;
+    margin-bottom:10px;
+}
+.price-old{
+    text-align:center;
+    text-decoration:line-through;
+    color:#999;
+    font-size:16px;
+}
+.price-new{
+    text-align:center;
+    font-size:30px;
+    color:#0a6cff;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+.features{
+    background:#f9f9f9;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:15px;
+}
+.features li{
+    margin-bottom:6px;
+}
+select,input{
+    width:100%;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:25px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+button{
+    width:100%;
+    padding:14px;
+    background:#0a6cff;
+    color:#fff;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+}
+.limited{
+    text-align:center;
+    font-weight:bold;
+    margin-top:10px;
+}
+.trust{
+    display:flex;
+    justify-content:space-around;
+    font-size:12px;
+    margin:15px 0;
+}
+.whatsapp{
+    background:#25D366;
+    color:white;
+    text-align:center;
+    padding:12px;
+    border-radius:30px;
+    font-size:16px;
+}
+.whatsapp a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+.footer{
+    font-size:12px;
+    text-align:center;
+    color:#666;
+    margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>مضوي محمول قوي</h1>
+<p class="subtitle">ضوء قوي في أي مكان وأي وقت</p>
+
+<p class="price-old">349 درهم</p>
+<p class="price-new">199 درهم فقط</p>
+
+<ul class="features">
+<li>🔦 إضاءة قوية وواضحة</li>
+<li>🔋 بطارية تدوم لساعات</li>
+<li>🔌 يشحن عبر USB</li>
+<li>👜 خفيف وسهل الحمل</li>
+<li>🚗 مناسب للمنزل والسيارة والرحلات</li>
+</ul>
+
+<form onsubmit="sendWhatsApp(); return false;">
+
+<select id="offer">
+<option>مضوي محمول × 1 — 199 درهم</option>
+<option>مضوي محمول × 2 — 349 درهم 🔥</option>
+</select>
+
+<input type="text" id="name" placeholder="الاسم الكامل" required>
+<input type="tel" id="phone" placeholder="رقم الهاتف" required>
+<input type="text" id="address" placeholder="المدينة + العنوان" required>
+
+<button type="submit">🛒 اطلب الآن</button>
+
+</form>
+
+<p class="limited">⏳ الكمية محدودة</p>
+
+<div class="trust">
+<span>💰 الدفع عند الاستلام</span>
+<span>🚚 توصيل سريع</span>
+<span>🔒 طلب آمن</span>
+</div>
+
+<div class="whatsapp">
+<a href="https://wa.me/212600000000" target="_blank">
+📞 استفسار أو طلب عبر واتساب
+</a>
+</div>
+
+<div class="footer">
+سياسة الخصوصية | شروط الاستخدام
+</div>
+
+</div>
+
+<script>
+function sendWhatsApp(){
+    let offer = document.getElementById("offer").value;
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let address = document.getElementById("address").value;
+
+    let message =
+    "السلام عليكم،%0A" +
+    "بغيت نطلب مضوي محمول.%0A%0A" +
+    "📦 العرض: " + offer + "%0A" +
+    "👤 الاسم: " + name + "%0A" +
+    "📞 الهاتف: " + phone + "%0A" +
+    "📍 العنوان: " + address;
+
+    window.open("https://wa.me/212600000000?text=" + message, "_blank");
+}
+</script>
+
+</body>
+</html>
